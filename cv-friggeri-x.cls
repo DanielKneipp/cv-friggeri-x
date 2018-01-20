@@ -178,18 +178,18 @@
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \ifafourpaper
   \newcommand{\entry}[4]{%
-  \parbox[t]{2cm}{\hfill#1}&\parbox[t]{11.1cm}{%
-  \textbf{#2}%
-  \hfill%
-  {, \normalsize\addfontfeature{Color=lightgray} \textit{#3}}\\%
-  #4\vspace{\parsep}%
-  }\\}
+    \parbox[t]{2cm}{\hfill#1}&\parbox[t]{11.1cm}{%
+    \textbf{#2}%
+    \hfill%
+    {\normalsize\addfontfeature{Color=lightgray} \textit{#3}}\\%
+    #4\vspace{\parsep}%
+    }\\}
 \else
   \newcommand{\entry}[4]{%
     \parbox[t]{2cm}{\hfill#1}&\parbox[t]{11.6cm}{%
     \textbf{#2}%
     \hfill%
-    {, \normalsize\addfontfeature{Color=lightgray} \textit{#3}}\\%
+    {\normalsize\addfontfeature{Color=lightgray} \textit{#3}}\\%
     #4\vspace{\parsep}%
     }\\}
 \fi
@@ -230,6 +230,7 @@
 
 \DeclareBibliographyDriver{article}{%
   \printfield{title}%
+  \par%
   \newblock%
   \printnames{author}%
   \par%
@@ -250,6 +251,7 @@
 
 \DeclareBibliographyDriver{book}{%
   \printfield{title}%
+  \par%
   \newblock%
   \printnames{author}%
   \par%
@@ -271,6 +273,7 @@
 
 \DeclareBibliographyDriver{inproceedings}{%
   \printfield{title}%
+  \par%
   \newblock%
   \printnames{author}%
   \par%
@@ -289,6 +292,7 @@
 
 \DeclareBibliographyDriver{misc}{%
   \printfield{title}%
+  \par%
   \newblock%
   \printnames{author}%
   \par%
@@ -309,6 +313,7 @@
 
 \DeclareBibliographyDriver{report}{%
   \printfield{title}%
+  \par%
   \newblock%
   \printnames{author}%
   \par%
