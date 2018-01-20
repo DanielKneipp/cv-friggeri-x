@@ -405,3 +405,18 @@
 \def\HyColor@@@@UseColor#1\@nil{\addfontfeatures{Color=#1}}
 \makeatother
 
+% Defining grade for skill section
+\newcommand{\grade}[1]{%
+  \begin{tikzpicture}
+    \clip (1em-.4em,-.4em) rectangle (5em +.5em ,.4em);
+    \begin{scope}
+      \clip (1em-.4em,-.4em) rectangle (#1em +.5em ,.4em);
+      \foreach \x in {1,2,...,5}{
+        \path[fill=red] (\x em,0) circle (.35em);
+      }
+    \end{scope}
+    \foreach \x in {1,2,...,5}{
+      \draw (\x em,0) circle (.35em);
+    }
+  \end{tikzpicture}%
+}
